@@ -12,7 +12,10 @@ namespace Bogus.DataSets
       /// Initializes a new instance of the <see cref="PhoneNumbers"/> class.
       /// </summary>
       /// <param name="locale">The locale used to generate values.</param>
-      public PhoneNumbers(string locale = "en") : base(locale)
+      /// <param name="seed">The seed used to generate data. When a <paramref name="seed"/> is specified,
+      /// the Randomizer.Seed global static is ignored and a locally isolated derived seed is used to derive randomness.
+      /// However, if the <paramref name="seed"/> parameter is null, then the Randomizer.Seed global static is used to derive randomness.</param>
+      public PhoneNumbers(string locale = "en", int? seed = null) : base(locale, seed)
       {
       }
 
